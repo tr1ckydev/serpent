@@ -10,14 +10,15 @@ test "@AfterAll" {
     try std.fs.cwd().deleteFile("does_exist.txt");
 }
 
-test "matchers for primitive values" {
+test {
     try expect(20 + 3).equals(23);
     try expect(@intFromBool(true)).equals(1);
     try expect(!true).not().equals(true);
     try expect(45).greaterThanOrEquals(12);
     try expect(-123).lessThan(0);
     try expect(120).within(100, 150);
-    try expect(0).within(-10, 10);
+    try expect("ziguana").contains('g');
+    try expect("serpent").startsWith("ser");
 }
 
 test "matchers for array like values" {

@@ -4,7 +4,7 @@ The serpent test runner can be configured through the already present `build.zig
 
 Simply add a `.serpent` field to the file and configure it the way you want.
 
-For a default starting point, check out this repository's `build.zig.zon`.
+For a default starting point, check out this repository's [`build.zig.zon`](https://github.com/tr1ckydev/serpent/blob/main/build.zig.zon#L13-L24).
 
 # Watch mode
 

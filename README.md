@@ -11,6 +11,10 @@ A sophisticated test runner for [zig](https://ziglang.org/), with extra features
 
 ![](./terminal.png)
 
+---
+
+![](./expect.png)
+
 ## Installation
 
 > Serpent follows latest zig master branch, but should work in older zig versions too.
@@ -69,7 +73,7 @@ Serpent is divided into two parts — the **test runner** and the **expect match
 
 Both are independent of each other. You could just swap the default test runner with the serpent test runner while just using `std.testing.*` expect functions. Or you could just keep the default test runner and only import the serpent module in your tests to take advantage of the matchers. Or you could do both, even better.
 
-Check out the documentation for more details.
+Check out the [documentation](https://github.com/tr1ckydev/serpent/blob/main/DOCUMENTATION.md) for more details.
 
 ## Credits
 
