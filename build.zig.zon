@@ -1,0 +1,24 @@
+.{
+    .name = .serpent,
+    .version = "1.0.0",
+    .fingerprint = 0x12f262d5ee0e75e3, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+    },
+    // This is the config for the serpent testing framework.
+    .serpent = .{
+        // Show passed and skipped tests.
+        .verbose = false,
+        // Set a value (>=1) to run each test the specified amount of times.
+        .rerun_each = 1,
+        // Set a value (>0) to abort the test runner early after reaching the number of test failures.
+        .bail = 0,
+        // Enable executing lifecycle hooks such as BeforeAll and AfterAll.
+        .lifecycle_hooks = true,
+    },
+}
