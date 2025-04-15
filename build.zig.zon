@@ -8,7 +8,6 @@
         "build.zig",
         "build.zig.zon",
         "src",
-        "src/chameleon/src",
         "LICENSE",
     },
     // This is the config for the serpent testing framework.
