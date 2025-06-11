@@ -9,6 +9,7 @@ const Config = struct {
         rerun_each: u8 = 1,
         bail: u8 = 0,
         lifecycle_hooks: bool = true,
+        print_exe_name: bool = false,
     } = .{},
 };
 
@@ -123,6 +124,14 @@ pub fn main() !void {
         try c.blue().fmt("{}", .{leak_count}),
         try c.gray().fmt("({} total)", .{total_count}),
     });
+
+    if (config.print_exe_name) {
+        var arg_iter = try std.process.argsWithAllocator(allocator);
+        defer arg_iter.deinit();
+        if (arg_iter.next()) |exe_name| {
+            std.debug.print("{s} ", .{std.fs.path.basename(exe_name)});
+        }
+    }
 
     std.debug.print("{s} {s}\n", .{
         if (fail_count == 0 and leak_count == 0)
