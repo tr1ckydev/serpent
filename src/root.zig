@@ -28,7 +28,14 @@ pub fn main() !void {
 
     // Check for build.zig.zon in cwd and import it, else use the default values.
     const config = blk: {
-        const contents_buf = std.fs.cwd().readFileAllocOptions(allocator, "build.zig.zon", 8192, null, @alignOf(u8), 0) catch |err| {
+        const contents_buf = std.fs.cwd().readFileAllocOptions(
+            allocator,
+            "build.zig.zon",
+            8192,
+            null,
+            .of(u8),
+            0,
+        ) catch |err| {
             // File doesn't exist, so return default values.
             if (err == error.FileNotFound) {
                 break :blk (Config{}).serpent;

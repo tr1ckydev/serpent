@@ -2,7 +2,7 @@
     .name = .serpent,
     .version = "1.0.0",
     .fingerprint = 0x12f262d5ee0e75e3, // Changing this has security and trust implications.
-    .minimum_zig_version = "0.14.0",
+    .minimum_zig_version = "0.15.0-dev.769+4d7980645",
     .dependencies = .{},
     .paths = .{
         "build.zig",
