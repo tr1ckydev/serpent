@@ -20,5 +20,7 @@
         .bail = 0,
         // Enable executing lifecycle hooks such as BeforeAll and AfterAll.
         .lifecycle_hooks = true,
+        // Print the name of the test executable.
+        .print_exe_name = false,
     },
 }
